@@ -48,3 +48,9 @@
 /mnt/Media_Study/Coding/Angular/Dotnet_core_course/GameStore/obj/Debug/net8.0/GameStore.pdb
 /mnt/Media_Study/Coding/Angular/Dotnet_core_course/GameStore/obj/Debug/net8.0/GameStore.genruntimeconfig.cache
 /mnt/Media_Study/Coding/Angular/Dotnet_core_course/GameStore/obj/Debug/net8.0/ref/GameStore.dll
+/mnt/Media_Study/Coding/Angular/Dotnet_core_course/GameStore/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/mnt/Media_Study/Coding/Angular/Dotnet_core_course/GameStore/bin/Debug/net8.0/MinimalApis.Extensions.dll
+/mnt/Media_Study/Coding/Angular/Dotnet_core_course/GameStore/bin/Debug/net8.0/MiniValidation.dll
+/mnt/Media_Study/Coding/Angular/Dotnet_core_course/GameStore/obj/Debug/net8.0/GameStore.csproj.AssemblyReference.cache
+/mnt/Media_Study/Coding/Angular/Dotnet_core_course/GameStore/obj/Debug/net8.0/GameStore.MvcApplicationPartsAssemblyInfo.cs
+/mnt/Media_Study/Coding/Angular/Dotnet_core_course/GameStore/obj/Debug/net8.0/GameStore.csproj.CopyComplete
