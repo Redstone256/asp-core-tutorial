@@ -33,15 +33,16 @@ public static class GamesEndpoints
     // return: WebApplication
     // It can be chained by other WebApplication 
     // which is done by calling method
-    public static WebApplication MapGamesEndpoints(this WebApplication app)
+    public static RouteGroupBuilder MapGamesEndpoints(this WebApplication app)
     {
-        app.MapGet("/", () => "Hello World!");
+
+        var group = app.MapGroup("games");  //      games/...
 
         // Get /games
-        app.MapGet("games", () => games);
+        group.MapGet("/", () => games);
 
         // Get /games/:id
-        app.MapGet("games/{id}", (int id) =>
+        group.MapGet("/{id}", (int id) =>
         {
             GameDto? game = games.Find(game => game.Id == id);
             return game is null ? Results.NotFound()
@@ -50,7 +51,7 @@ public static class GamesEndpoints
             .WithName(GetGameEndPointName);
 
         // Post /games
-        app.MapPost("games", (CreateGameDto newGame) =>
+        group.MapPost("/", (CreateGameDto newGame) =>
         {
             GameDto game = new(
                 games.Count + 1,
@@ -66,7 +67,7 @@ public static class GamesEndpoints
         });
 
         // PUT /games
-        app.MapPut("games/{id}", (int id, UpdateGameDto updatedGame) =>
+        group.MapPut("/{id}", (int id, UpdateGameDto updatedGame) =>
         {
             var index = games.FindIndex(game => game.Id == id);
             // Invalid index
@@ -88,13 +89,13 @@ public static class GamesEndpoints
 
         // Delete /games/1
 
-        app.MapDelete("games/{id}", (int id) =>
+        group.MapDelete("/{id}", (int id) =>
         {
             games.RemoveAll(game => id == game.Id);
             return Results.NoContent();
         }
         );
         
-        return app;
+        return group;
     }
 }
