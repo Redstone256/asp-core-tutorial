@@ -4,7 +4,7 @@ using GameStore.Data;
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-var connString = "Data Source=GameStore.db";
+var connString = builder.Configuration.GetConnectionString("GameStore");
 
 builder.Services.AddSqlite<GameStoreContext>(connString);
 
