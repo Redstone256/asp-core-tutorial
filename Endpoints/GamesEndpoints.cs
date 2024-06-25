@@ -1,6 +1,6 @@
 ﻿using GameStore.DTOs;
 
-namespace GameStore;
+namespace GameStore.Endpoints;
 
 public static class GamesEndpoints
 {

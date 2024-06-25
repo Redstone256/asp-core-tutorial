@@ -1,4 +1,4 @@
-using GameStore;
+using GameStore.Endpoints;
 using GameStore.Data;
 
 var builder = WebApplication.CreateBuilder(args);

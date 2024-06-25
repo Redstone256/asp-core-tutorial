@@ -3,7 +3,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GameStore.Data;
 
-public class GameStoreContext(DbContextOptions<GameStoreContext> options) 
+
+public class GameStoreContext(DbContextOptions<GameStoreContext> options)
     : DbContext(options)
 {
     // DbSet used to query and save instances
